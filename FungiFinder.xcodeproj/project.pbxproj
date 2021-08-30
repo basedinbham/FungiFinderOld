@@ -14,6 +14,10 @@
 		27ECE52F26DD4BFF00B5B81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27ECE52E26DD4BFF00B5B81D /* Assets.xcassets */; };
 		27ECE53226DD4BFF00B5B81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27ECE53026DD4BFF00B5B81D /* LaunchScreen.storyboard */; };
 		27ECE53C26DD4CE100B5B81D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27ECE53B26DD4CE100B5B81D /* CloudKit.framework */; };
+		27EF343D26DD7C000099DB84 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF343C26DD7C000099DB84 /* CoreDataStack.swift */; };
+		27EF343F26DD7F240099DB84 /* Mushroom+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF343E26DD7F240099DB84 /* Mushroom+Convenience.swift */; };
+		27EF344126DD8B710099DB84 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EF344026DD8B710099DB84 /* MapKit.framework */; };
+		27EF344326DD94EF0099DB84 /* Observation+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF344226DD94EF0099DB84 /* Observation+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		27ECE53326DD4BFF00B5B81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27ECE53926DD4CD500B5B81D /* FungiFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FungiFinder.entitlements; sourceTree = "<group>"; };
 		27ECE53B26DD4CE100B5B81D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		27EF343C26DD7C000099DB84 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		27EF343E26DD7F240099DB84 /* Mushroom+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mushroom+Convenience.swift"; sourceTree = "<group>"; };
+		27EF344026DD8B710099DB84 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		27EF344226DD94EF0099DB84 /* Observation+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observation+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27EF344126DD8B710099DB84 /* MapKit.framework in Frameworks */,
 				27ECE53C26DD4CE100B5B81D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +81,7 @@
 		27ECE53A26DD4CE100B5B81D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27EF344026DD8B710099DB84 /* MapKit.framework */,
 				27ECE53B26DD4CE100B5B81D /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -92,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				27ECE52B26DD4BFD00B5B81D /* FungiFinder.xcdatamodeld */,
+				27EF343C26DD7C000099DB84 /* CoreDataStack.swift */,
+				27EF343E26DD7F240099DB84 /* Mushroom+Convenience.swift */,
+				27EF344226DD94EF0099DB84 /* Observation+Convenience.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -175,9 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27EF344326DD94EF0099DB84 /* Observation+Convenience.swift in Sources */,
 				27ECE52D26DD4BFD00B5B81D /* FungiFinder.xcdatamodeld in Sources */,
+				27EF343F26DD7F240099DB84 /* Mushroom+Convenience.swift in Sources */,
 				27ECE52326DD4BFD00B5B81D /* AppDelegate.swift in Sources */,
 				27ECE52526DD4BFD00B5B81D /* SceneDelegate.swift in Sources */,
+				27EF343D26DD7C000099DB84 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
