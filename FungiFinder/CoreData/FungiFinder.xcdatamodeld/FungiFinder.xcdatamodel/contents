@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Mushroom" representedClassName="Mushroom" syncable="YES" codeGenerationType="class">
+        <attribute name="capShape" attributeType="String" defaultValueString="nil"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="howEdible" attributeType="String" defaultValueString=""/>
+        <attribute name="hymeniumType" attributeType="String" defaultValueString="nil"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString="nil"/>
+        <attribute name="sporePrintColor" attributeType="String" defaultValueString="nil"/>
+        <attribute name="stipeCharacter" attributeType="String" defaultValueString="nil"/>
+        <attribute name="whichGills" attributeType="String" defaultValueString="nil"/>
+    </entity>
+    <elements>
+        <element name="Mushroom" positionX="-63" positionY="-18" width="128" height="164"/>
+    </elements>
+</model>
