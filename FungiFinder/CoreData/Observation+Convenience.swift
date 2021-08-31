@@ -9,10 +9,10 @@ import CoreData
 import UIKit
 
 extension Observation {
-    convenience init(date: Date, image: Data?, latitude: String?, longitude: String?, name: String, notes: String?, reminder: Date?, type: String, context: NSManagedObjectContext = CoreDataStack.context) {
+    convenience init(date: Date, image: UIImage?, latitude: String?, longitude: String?, name: String, notes: String?, reminder: Date?, type: String, context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)
         self.date = date
-        self.image = image
+        self.image = image?.jpegData(compressionQuality: 0.3)
         self.latitude = latitude
         self.longitude = longitude
         self.name = name
