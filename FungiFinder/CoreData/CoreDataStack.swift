@@ -22,7 +22,9 @@ enum CoreDataStack {
     }()
     
     static var context: NSManagedObjectContext {
-        container.viewContext
+        let context = container.viewContext
+        context.automaticallyMergesChangesFromParent = true
+        return context
     }
     
     static func saveContext() {

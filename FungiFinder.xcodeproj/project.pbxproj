@@ -18,6 +18,7 @@
 		27EF343F26DD7F240099DB84 /* Mushroom+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF343E26DD7F240099DB84 /* Mushroom+Convenience.swift */; };
 		27EF344126DD8B710099DB84 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EF344026DD8B710099DB84 /* MapKit.framework */; };
 		27EF344326DD94EF0099DB84 /* Observation+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF344226DD94EF0099DB84 /* Observation+Convenience.swift */; };
+		27EF344726DD9AE70099DB84 /* MushroomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF344626DD9AE70099DB84 /* MushroomController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		27EF343E26DD7F240099DB84 /* Mushroom+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mushroom+Convenience.swift"; sourceTree = "<group>"; };
 		27EF344026DD8B710099DB84 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		27EF344226DD94EF0099DB84 /* Observation+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observation+Convenience.swift"; sourceTree = "<group>"; };
+		27EF344626DD9AE70099DB84 /* MushroomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				27ECE53E26DD4FE400B5B81D /* CoreData */,
+				27EF344426DD9ACF0099DB84 /* Controllers */,
 				27ECE53F26DD4FF700B5B81D /* Views */,
 				27ECE53926DD4CD500B5B81D /* FungiFinder.entitlements */,
 				27ECE53D26DD4FAE00B5B81D /* Resources */,
@@ -116,6 +119,22 @@
 				27ECE53026DD4BFF00B5B81D /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		27EF344426DD9ACF0099DB84 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27EF344526DD9ADD0099DB84 /* ModelControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		27EF344526DD9ADD0099DB84 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				27EF344626DD9AE70099DB84 /* MushroomController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +209,7 @@
 			files = (
 				27EF344326DD94EF0099DB84 /* Observation+Convenience.swift in Sources */,
 				27ECE52D26DD4BFD00B5B81D /* FungiFinder.xcdatamodeld in Sources */,
+				27EF344726DD9AE70099DB84 /* MushroomController.swift in Sources */,
 				27EF343F26DD7F240099DB84 /* Mushroom+Convenience.swift in Sources */,
 				27ECE52326DD4BFD00B5B81D /* AppDelegate.swift in Sources */,
 				27ECE52526DD4BFD00B5B81D /* SceneDelegate.swift in Sources */,
