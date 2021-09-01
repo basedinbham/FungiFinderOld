@@ -9,7 +9,7 @@ import CoreData
 import UIKit
 
 extension Mushroom {
-    convenience init(name: String, nickname: String?, image: UIImage?, hymeniumType: String, capShape: String, whichGills: String, stipeCharacter: String, sporePrintColor: String, howEdible: String, season: String, shroomDescription: String, substrate: String?, context: NSManagedObjectContext = CoreDataStack.context) {
+    convenience init(name: String, nickname: String?, image: UIImage?, hymeniumType: String, capShape: String, whichGills: String, stipeCharacter: String, sporePrintColor: String, howEdible: String, season: String, shroomDescription: String, context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)
         self.name = name
         self.nickname = nickname
@@ -22,7 +22,6 @@ extension Mushroom {
         self.howEdible = howEdible
         self.season = season
         self.shroomDescription = shroomDescription
-        self.substrate = substrate
     }
 } // End of Extension
 
