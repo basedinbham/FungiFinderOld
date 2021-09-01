@@ -9,7 +9,7 @@ import CoreData
 
 class MushroomController {
     
-    static let shared = MushroomController()
+//    static let shared = MushroomController()
     
     static var mushrooms: [Mushroom] {
         

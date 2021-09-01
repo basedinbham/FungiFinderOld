@@ -7,9 +7,11 @@
 
 import CoreData
 
-enum CoreDataStack {
+ class CoreDataStack {
     
-    static let container: NSPersistentCloudKitContainer = {
+    static let shared = CoreDataStack()
+    
+    lazy var container: NSPersistentCloudKitContainer = {
         
         let container = NSPersistentCloudKitContainer(name: "FungiFinder")
         
@@ -22,7 +24,7 @@ enum CoreDataStack {
     }()
     
     static var context: NSManagedObjectContext {
-        let context = container.viewContext
+        let context = CoreDataStack.shared.container.viewContext
         context.automaticallyMergesChangesFromParent = true
         return context
     }
