@@ -11,7 +11,6 @@
         <attribute name="shroomDescription" attributeType="String" defaultValueString="nil"/>
         <attribute name="sporePrintColor" attributeType="String" defaultValueString="nil"/>
         <attribute name="stipeCharacter" attributeType="String" defaultValueString="nil"/>
-        <attribute name="substrate" optional="YES" attributeType="String"/>
         <attribute name="whichGills" attributeType="String" defaultValueString="nil"/>
     </entity>
     <entity name="Observation" representedClassName="Observation" syncable="YES" codeGenerationType="class">
@@ -25,7 +24,7 @@
         <attribute name="type" attributeType="String" defaultValueString="nil"/>
     </entity>
     <elements>
-        <element name="Mushroom" positionX="-63" positionY="-18" width="128" height="209"/>
+        <element name="Mushroom" positionX="-63" positionY="-18" width="128" height="194"/>
         <element name="Observation" positionX="-54" positionY="54" width="128" height="149"/>
     </elements>
 </model>
