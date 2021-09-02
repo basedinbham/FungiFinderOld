@@ -19,5 +19,6 @@ extension Observation {
         self.notes = notes
         self.reminder = reminder
         self.type = type
+        self.id = UUID()
     }
 } // End of Extension

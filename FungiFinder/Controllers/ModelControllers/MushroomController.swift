@@ -5,11 +5,9 @@
 //  Created by Kyle Warren on 8/30/21.
 //
 
-import CoreData
+import UIKit
 
 class MushroomController {
-    
-//    static let shared = MushroomController()
     
     static var mushrooms: [Mushroom] {
         

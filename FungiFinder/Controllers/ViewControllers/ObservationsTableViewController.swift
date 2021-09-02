@@ -1,37 +1,45 @@
 //
-//  MushroomTableViewController.swift
+//  ObservationsTableViewController.swift
 //  FungiFinder
 //
-//  Created by Kyle Warren on 9/1/21.
+//  Created by Kyle Warren on 9/2/21.
 //
 
 import UIKit
 
-class MushroomTableViewController: UITableViewController {
+class ObservationsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return MushroomController.mushrooms.count
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
 
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mushroomCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        let mushroom = MushroomController.mushrooms[indexPath.row]
-        cell.textLabel?.text = mushroom.name
+        // Configure the cell...
 
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.

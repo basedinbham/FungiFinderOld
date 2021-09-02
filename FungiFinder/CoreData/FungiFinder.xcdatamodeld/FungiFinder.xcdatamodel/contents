@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Mushroom" representedClassName="Mushroom" syncable="YES" codeGenerationType="class">
+    <entity name="Mushroom1" representedClassName="Mushroom1" syncable="YES" codeGenerationType="class">
         <attribute name="capShape" attributeType="String" defaultValueString="nil"/>
         <attribute name="howEdible" attributeType="String" defaultValueString="nil"/>
         <attribute name="hymeniumType" attributeType="String" defaultValueString="nil"/>
@@ -15,6 +15,7 @@
     </entity>
     <entity name="Observation" representedClassName="Observation" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" defaultDateTimeInterval="652053300" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="latitude" optional="YES" attributeType="String"/>
         <attribute name="longitude" optional="YES" attributeType="String"/>
@@ -24,7 +25,7 @@
         <attribute name="type" attributeType="String" defaultValueString="nil"/>
     </entity>
     <elements>
-        <element name="Mushroom" positionX="-63" positionY="-18" width="128" height="194"/>
-        <element name="Observation" positionX="-54" positionY="54" width="128" height="149"/>
+        <element name="Mushroom1" positionX="-63" positionY="-18" width="128" height="194"/>
+        <element name="Observation" positionX="-54" positionY="54" width="128" height="164"/>
     </elements>
 </model>

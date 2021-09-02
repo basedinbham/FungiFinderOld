@@ -128,6 +128,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="67S-4r-NQ2" kind="show" identifier="toDetailVC" id="51U-XV-jgf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -140,6 +143,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moP-7y-hUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-284" y="765"/>
+        </scene>
+        <!--Mushroom Detail View Controller-->
+        <scene sceneID="kWL-FP-ZlD">
+            <objects>
+                <viewController id="67S-4r-NQ2" customClass="MushroomDetailViewController" customModule="FungiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hcB-VK-yma">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-SF-F34">
+                                <rect key="frame" x="80" y="54" width="254" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="urk-U6-H7C"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="53U-Oz-NvN">
+                                <rect key="frame" x="20" y="227" width="374" height="154"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG5-lX-g5z">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(nickname)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GM-O1-e4t">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(howEdible)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qz2-IE-2kg">
+                                        <rect key="frame" x="0.0" y="89" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(season)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-Fu-WTq">
+                                        <rect key="frame" x="0.0" y="133.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(shroomDescription)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04Y-Tz-tk9">
+                                <rect key="frame" x="20" y="401" width="374" height="441"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rhb-2G-4Ls"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="53U-Oz-NvN" firstAttribute="leading" secondItem="Rhb-2G-4Ls" secondAttribute="leading" constant="20" id="0td-xd-gqc"/>
+                            <constraint firstItem="Rhb-2G-4Ls" firstAttribute="bottom" secondItem="04Y-Tz-tk9" secondAttribute="bottom" constant="20" id="3qv-mL-GlQ"/>
+                            <constraint firstItem="04Y-Tz-tk9" firstAttribute="leading" secondItem="Rhb-2G-4Ls" secondAttribute="leading" constant="20" id="6Ed-Rj-ECZ"/>
+                            <constraint firstItem="Rhb-2G-4Ls" firstAttribute="trailing" secondItem="04Y-Tz-tk9" secondAttribute="trailing" constant="20" id="7ZE-y4-Ykv"/>
+                            <constraint firstItem="hhX-SF-F34" firstAttribute="leading" secondItem="Rhb-2G-4Ls" secondAttribute="leading" constant="80" id="SUj-0d-LTp"/>
+                            <constraint firstItem="hhX-SF-F34" firstAttribute="top" secondItem="Rhb-2G-4Ls" secondAttribute="top" constant="10" id="Wyt-hR-ARc"/>
+                            <constraint firstItem="Rhb-2G-4Ls" firstAttribute="trailing" secondItem="53U-Oz-NvN" secondAttribute="trailing" constant="20" id="mpS-47-gMq"/>
+                            <constraint firstItem="Rhb-2G-4Ls" firstAttribute="trailing" secondItem="hhX-SF-F34" secondAttribute="trailing" constant="80" id="nks-AF-5sL"/>
+                            <constraint firstItem="53U-Oz-NvN" firstAttribute="top" secondItem="hhX-SF-F34" secondAttribute="bottom" constant="20" id="t3r-NL-V12"/>
+                            <constraint firstItem="04Y-Tz-tk9" firstAttribute="top" secondItem="53U-Oz-NvN" secondAttribute="bottom" constant="20" id="uJP-u4-uwN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="alO-zr-2Cn"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="04Y-Tz-tk9" id="Sua-wz-3Np"/>
+                        <outlet property="howEdibleLabel" destination="qz2-IE-2kg" id="Zpo-eP-Uc2"/>
+                        <outlet property="mushroomImage" destination="hhX-SF-F34" id="qqt-pg-gBs"/>
+                        <outlet property="nameLabel" destination="MG5-lX-g5z" id="kHA-9K-oZk"/>
+                        <outlet property="nicknameLabel" destination="2GM-O1-e4t" id="1wN-qJ-KOj"/>
+                        <outlet property="seasonLabel" destination="tCa-Fu-WTq" id="jnV-3q-aze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcN-PN-lNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466.66666666666669" y="764.73214285714278"/>
         </scene>
     </scenes>
     <resources>
