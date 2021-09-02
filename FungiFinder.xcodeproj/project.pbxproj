@@ -10,6 +10,12 @@
 		2728463926E03081006B2700 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2728463826E03081006B2700 /* LandingViewController.swift */; };
 		2728463B26E035D8006B2700 /* MushroomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2728463A26E035D8006B2700 /* MushroomTableViewController.swift */; };
 		2728463D26E037D1006B2700 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2728463C26E037D1006B2700 /* HomeViewController.swift */; };
+		27ACA4BE26E047540028F16C /* MushroomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4BD26E047540028F16C /* MushroomDetailViewController.swift */; };
+		27ACA4C126E153410028F16C /* Mushroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4C026E153410028F16C /* Mushroom.swift */; };
+		27ACA4C426E158620028F16C /* ObservationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4C326E158620028F16C /* ObservationsTableViewController.swift */; };
+		27ACA4C726E15B450028F16C /* ObservationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4C626E15B450028F16C /* ObservationController.swift */; };
+		27ACA4CA26E161F90028F16C /* ObservationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4C926E161F90028F16C /* ObservationError.swift */; };
+		27ACA4CC26E168510028F16C /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4CB26E168510028F16C /* NSManagedObjectContext.swift */; };
 		27ECE52326DD4BFD00B5B81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECE52226DD4BFD00B5B81D /* AppDelegate.swift */; };
 		27ECE52526DD4BFD00B5B81D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECE52426DD4BFD00B5B81D /* SceneDelegate.swift */; };
 		27ECE52A26DD4BFD00B5B81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27ECE52826DD4BFD00B5B81D /* Main.storyboard */; };
@@ -28,6 +34,12 @@
 		2728463826E03081006B2700 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		2728463A26E035D8006B2700 /* MushroomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomTableViewController.swift; sourceTree = "<group>"; };
 		2728463C26E037D1006B2700 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		27ACA4BD26E047540028F16C /* MushroomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomDetailViewController.swift; sourceTree = "<group>"; };
+		27ACA4C026E153410028F16C /* Mushroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mushroom.swift; sourceTree = "<group>"; };
+		27ACA4C326E158620028F16C /* ObservationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsTableViewController.swift; sourceTree = "<group>"; };
+		27ACA4C626E15B450028F16C /* ObservationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationController.swift; sourceTree = "<group>"; };
+		27ACA4C926E161F90028F16C /* ObservationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationError.swift; sourceTree = "<group>"; };
+		27ACA4CB26E168510028F16C /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
 		27ECE51F26DD4BFD00B5B81D /* FungiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FungiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27ECE52226DD4BFD00B5B81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27ECE52426DD4BFD00B5B81D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,10 +74,44 @@
 			isa = PBXGroup;
 			children = (
 				2728463826E03081006B2700 /* LandingViewController.swift */,
-				2728463A26E035D8006B2700 /* MushroomTableViewController.swift */,
 				2728463C26E037D1006B2700 /* HomeViewController.swift */,
+				27ACA4CD26E16E140028F16C /* MushrroomID */,
+				27ACA4CE26E16E1D0028F16C /* Observations */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		27ACA4BF26E153370028F16C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27ACA4C026E153410028F16C /* Mushroom.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27ACA4C826E15DA50028F16C /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27ACA4C926E161F90028F16C /* ObservationError.swift */,
+			);
+			path = "Helpers+Extensions";
+			sourceTree = "<group>";
+		};
+		27ACA4CD26E16E140028F16C /* MushrroomID */ = {
+			isa = PBXGroup;
+			children = (
+				2728463A26E035D8006B2700 /* MushroomTableViewController.swift */,
+				27ACA4BD26E047540028F16C /* MushroomDetailViewController.swift */,
+			);
+			path = MushrroomID;
+			sourceTree = "<group>";
+		};
+		27ACA4CE26E16E1D0028F16C /* Observations */ = {
+			isa = PBXGroup;
+			children = (
+				27ACA4C326E158620028F16C /* ObservationsTableViewController.swift */,
+			);
+			name = Observations;
 			sourceTree = "<group>";
 		};
 		27ECE51626DD4BFD00B5B81D = {
@@ -88,9 +134,11 @@
 		27ECE52126DD4BFD00B5B81D /* FungiFinder */ = {
 			isa = PBXGroup;
 			children = (
+				27ACA4BF26E153370028F16C /* Model */,
 				27ECE53E26DD4FE400B5B81D /* CoreData */,
 				27EF344426DD9ACF0099DB84 /* Controllers */,
 				27ECE53F26DD4FF700B5B81D /* Views */,
+				27ACA4C826E15DA50028F16C /* Helpers+Extensions */,
 				27ECE53926DD4CD500B5B81D /* FungiFinder.entitlements */,
 				27ECE53D26DD4FAE00B5B81D /* Resources */,
 			);
@@ -124,6 +172,7 @@
 				27EF343C26DD7C000099DB84 /* CoreDataStack.swift */,
 				27EF343E26DD7F240099DB84 /* Mushroom+Convenience.swift */,
 				27EF344226DD94EF0099DB84 /* Observation+Convenience.swift */,
+				27ACA4CB26E168510028F16C /* NSManagedObjectContext.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -150,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				27EF344626DD9AE70099DB84 /* MushroomController.swift */,
+				27ACA4C626E15B450028F16C /* ObservationController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -225,15 +275,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				27EF344326DD94EF0099DB84 /* Observation+Convenience.swift in Sources */,
+				27ACA4CC26E168510028F16C /* NSManagedObjectContext.swift in Sources */,
 				27ECE52D26DD4BFD00B5B81D /* FungiFinder.xcdatamodeld in Sources */,
+				27ACA4CA26E161F90028F16C /* ObservationError.swift in Sources */,
 				2728463926E03081006B2700 /* LandingViewController.swift in Sources */,
 				27EF344726DD9AE70099DB84 /* MushroomController.swift in Sources */,
+				27ACA4C426E158620028F16C /* ObservationsTableViewController.swift in Sources */,
+				27ACA4BE26E047540028F16C /* MushroomDetailViewController.swift in Sources */,
 				27EF343F26DD7F240099DB84 /* Mushroom+Convenience.swift in Sources */,
 				2728463D26E037D1006B2700 /* HomeViewController.swift in Sources */,
+				27ACA4C726E15B450028F16C /* ObservationController.swift in Sources */,
 				27ECE52326DD4BFD00B5B81D /* AppDelegate.swift in Sources */,
 				27ECE52526DD4BFD00B5B81D /* SceneDelegate.swift in Sources */,
 				2728463B26E035D8006B2700 /* MushroomTableViewController.swift in Sources */,
 				27EF343D26DD7C000099DB84 /* CoreDataStack.swift in Sources */,
+				27ACA4C126E153410028F16C /* Mushroom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

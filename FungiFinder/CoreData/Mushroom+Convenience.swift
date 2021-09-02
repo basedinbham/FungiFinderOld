@@ -8,7 +8,7 @@
 import CoreData
 import UIKit
 
-extension Mushroom {
+extension Mushroom1 {
     convenience init(name: String, nickname: String?, image: UIImage?, hymeniumType: String, capShape: String, whichGills: String, stipeCharacter: String, sporePrintColor: String, howEdible: String, season: String, shroomDescription: String, context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)
         self.name = name
