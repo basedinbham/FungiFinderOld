@@ -77,9 +77,9 @@
 		2728463726E03065006B2700 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				27ACA4DA26E2A9290028F16C /* MapKit */,
 				2728463826E03081006B2700 /* LandingViewController.swift */,
 				2728463C26E037D1006B2700 /* HomeViewController.swift */,
+				27ACA4DA26E2A9290028F16C /* MapKit */,
 				27ACA4CD26E16E140028F16C /* MushroomID */,
 				27ACA4CE26E16E1D0028F16C /* Observations */,
 			);

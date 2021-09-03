@@ -54,7 +54,4 @@ class ObservationController {
             // clear notifications for observation
         }
     }
-    
-    
-    
 }// End of Class
