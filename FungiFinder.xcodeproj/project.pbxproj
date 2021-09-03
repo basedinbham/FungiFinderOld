@@ -17,6 +17,7 @@
 		27ACA4CA26E161F90028F16C /* ObservationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4C926E161F90028F16C /* ObservationError.swift */; };
 		27ACA4CC26E168510028F16C /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4CB26E168510028F16C /* NSManagedObjectContext.swift */; };
 		27ACA4D026E193670028F16C /* ObservationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4CF26E193670028F16C /* ObservationDetailViewController.swift */; };
+		27ACA4DD26E2A93C0028F16C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ACA4DC26E2A93C0028F16C /* MapViewController.swift */; };
 		27ECE52326DD4BFD00B5B81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECE52226DD4BFD00B5B81D /* AppDelegate.swift */; };
 		27ECE52526DD4BFD00B5B81D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECE52426DD4BFD00B5B81D /* SceneDelegate.swift */; };
 		27ECE52A26DD4BFD00B5B81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27ECE52826DD4BFD00B5B81D /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		27ACA4C926E161F90028F16C /* ObservationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationError.swift; sourceTree = "<group>"; };
 		27ACA4CB26E168510028F16C /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
 		27ACA4CF26E193670028F16C /* ObservationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailViewController.swift; sourceTree = "<group>"; };
+		27ACA4DC26E2A93C0028F16C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		27ECE51F26DD4BFD00B5B81D /* FungiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FungiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27ECE52226DD4BFD00B5B81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27ECE52426DD4BFD00B5B81D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		2728463726E03065006B2700 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				27ACA4DA26E2A9290028F16C /* MapKit */,
 				2728463826E03081006B2700 /* LandingViewController.swift */,
 				2728463C26E037D1006B2700 /* HomeViewController.swift */,
 				27ACA4CD26E16E140028F16C /* MushroomID */,
@@ -115,6 +118,14 @@
 				27ACA4CF26E193670028F16C /* ObservationDetailViewController.swift */,
 			);
 			name = Observations;
+			sourceTree = "<group>";
+		};
+		27ACA4DA26E2A9290028F16C /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				27ACA4DC26E2A93C0028F16C /* MapViewController.swift */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		27ECE51626DD4BFD00B5B81D = {
@@ -290,6 +301,7 @@
 				2728463D26E037D1006B2700 /* HomeViewController.swift in Sources */,
 				27ACA4C726E15B450028F16C /* ObservationController.swift in Sources */,
 				27ECE52326DD4BFD00B5B81D /* AppDelegate.swift in Sources */,
+				27ACA4DD26E2A93C0028F16C /* MapViewController.swift in Sources */,
 				27ECE52526DD4BFD00B5B81D /* SceneDelegate.swift in Sources */,
 				2728463B26E035D8006B2700 /* MushroomTableViewController.swift in Sources */,
 				27EF343D26DD7C000099DB84 /* CoreDataStack.swift in Sources */,
