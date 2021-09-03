@@ -11,7 +11,7 @@ class ObservationController {
     
     static let shared = ObservationController()
     var observations: [Observation] = []
-    let privateDB = CKContainer.default().privateCloudDatabase
+    let publicDB = CKContainer.default().publicCloudDatabase
     
     private lazy var fetchRequest: NSFetchRequest<Observation> = {
         let request = NSFetchRequest<Observation>(entityName: "Observation")
@@ -21,12 +21,17 @@ class ObservationController {
     
     //MARK: - CRUD
     
-    func createObservation(with name: String, date: Date, image: Data, notes: String, reminder: Date, type: String, latitude: String, longitude: String) {
-        let observation = Observation(date: date, image: image, latitude: latitude, longitude: longitude, name: name, notes: notes, reminder: reminder, type: type)
+    func createObservation(with name: String, date: Date, notes: String, reminder: Date, type: String, latitude: String, longitude: String) {
+        let observation = Observation(date: date, image: nil, latitude: latitude, longitude: longitude, name: name, notes: notes, reminder: reminder, type: type)
         observations.append(observation)
     }
     
-    
+    func fetchOBservations() {
+        let observations = (try? CoreDataStack.context.fetch(fetchRequest)) ?? []
+        self.observations = observations
+        CoreDataStack.saveContext()
+
+    }
     
     
     

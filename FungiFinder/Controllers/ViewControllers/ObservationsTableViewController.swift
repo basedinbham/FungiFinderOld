@@ -8,38 +8,34 @@
 import UIKit
 
 class ObservationsTableViewController: UITableViewController {
-
+    
+    //MARK: - LIFECYCLES
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+        override func viewWillAppear(_ animated: Bool){
+            super.viewWillAppear(animated)
+            
+            ObservationController.shared.fetchOBservations()
+            tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return ObservationController.shared.observations.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "observationCell", for: indexPath)
 
-        // Configure the cell...
-
+        let observation = ObservationController.shared.observations[indexPath.row]
+        cell.textLabel?.text = observation.name
+        
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -76,14 +72,20 @@ class ObservationsTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toDetailVC" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                  let destinationVC = segue.destination as?
+                    ObservationDetailViewController else { return }
+            
+            let observationToSend = ObservationController.shared.observations[indexPath.row]
+            destinationVC.observation = observationToSend
+        }
     }
-    */
+
 
 }
