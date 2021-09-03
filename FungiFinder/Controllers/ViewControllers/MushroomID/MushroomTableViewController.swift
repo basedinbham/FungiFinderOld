@@ -11,8 +11,7 @@ class MushroomTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        navigationController?.navigationBar.isHidden = false
     }
 
     // MARK: - Table view data source
@@ -20,7 +19,6 @@ class MushroomTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MushroomController.mushrooms.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mushroomCell", for: indexPath)
@@ -33,7 +31,6 @@ class MushroomTableViewController: UITableViewController {
 
     // MARK: - Navigation
 
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC" {
             guard let indexPath = tableView.indexPathForSelectedRow,
@@ -43,6 +40,4 @@ class MushroomTableViewController: UITableViewController {
             destinationVC.mushroom = mushroomToSend
         }
     }
-
-
-}
+}// End of Class

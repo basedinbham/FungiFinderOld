@@ -50,8 +50,6 @@ class ObservationController {
             observations.remove(at: index)
             CoreDataStack.context.delete(observation)
             CoreDataStack.saveContext()
-            
-            // clear notifications for observation
         }
     }
 }// End of Class

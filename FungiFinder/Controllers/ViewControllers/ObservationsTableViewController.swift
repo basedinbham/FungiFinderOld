@@ -12,6 +12,7 @@ class ObservationsTableViewController: UITableViewController {
     //MARK: - LIFECYCLES
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = false
     }
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)

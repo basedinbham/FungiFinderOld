@@ -62,5 +62,4 @@ class MushroomDetailViewController: UIViewController {
      }
      */
     
-
-}
+} // End of Class
