@@ -85,6 +85,14 @@
                                     <segue destination="Oe8-w4-bU2" kind="show" id="Zwm-wK-EoO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGa-T4-EYu">
+                                <rect key="frame" x="53" y="526" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Map Test"/>
+                                <connections>
+                                    <segue destination="gbv-iy-AH5" kind="show" id="W6C-MC-Cb9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bkL-m2-fQE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -296,6 +304,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moP-7y-hUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-284" y="765"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="shs-tz-2NX">
+            <objects>
+                <viewController id="gbv-iy-AH5" customClass="MapViewController" customModule="FungiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nki-hD-jVc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OJ9-NJ-bA7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XBX-xP-rha"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OJ9-NJ-bA7" firstAttribute="top" secondItem="XBX-xP-rha" secondAttribute="top" id="HEP-0T-MG3"/>
+                            <constraint firstItem="OJ9-NJ-bA7" firstAttribute="leading" secondItem="Nki-hD-jVc" secondAttribute="leading" id="KBT-V2-iu3"/>
+                            <constraint firstAttribute="bottom" secondItem="OJ9-NJ-bA7" secondAttribute="bottom" id="SNw-xj-v8d"/>
+                            <constraint firstAttribute="trailing" secondItem="OJ9-NJ-bA7" secondAttribute="trailing" id="azh-Hn-jaE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f0W-hW-602"/>
+                    <connections>
+                        <outlet property="mapView" destination="OJ9-NJ-bA7" id="AHQ-Yd-XCr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yda-rc-Pzl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="1456"/>
         </scene>
         <!--Mushroom Detail View Controller-->
         <scene sceneID="kWL-FP-ZlD">
