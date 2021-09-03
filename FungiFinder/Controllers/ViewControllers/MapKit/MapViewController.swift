@@ -13,33 +13,35 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     //MARK: - OUTLETS
     @IBOutlet private var mapView: MKMapView!
-    
+    // Gets location of device
     let manager = CLLocationManager()
     
     //MARK: - LIFECYCLES
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupViews()
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.delegate = self
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+        setupViews()
+        
     }
     
-    
     //MARK: - HELPER METHODS
-//    func setupViews() {
-//        // Set initial location to users current location
-//        let initialLocation = CLLocation(latitude: 48.74908, longitude: -122.488225)
-//        mapView.centerToLocation(initialLocation)
-//    }
-    
+    func setupViews() {
+        // Set accuracy for location
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        // set delegate for location
+        manager.delegate = self
+        // Request permission
+        manager.requestWhenInUseAuthorization()
+        // Fetch location
+        manager.startUpdatingLocation()
+        // Set delegate for mapView
+        mapView.delegate = self
+    }
+    // Delegate function; gets called when location is updated
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             manager.stopUpdatingLocation()
@@ -47,12 +49,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             render(location)
         }
     }
-    
+    // Zoom into map on location, & add pin
     func render(_ location: CLLocation) {
-        
+        // The latitude and longitude associated with a location
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        
+        // The width and height of a map region.
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        // Set maps region(view)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.setRegion(region, animated: true)
         
@@ -60,7 +63,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         pin.coordinate = coordinate
         mapView.addAnnotation(pin)
     }
-    
+    // Set custom image for map pin
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customAnnotation")
+        annotationView.image = #imageLiteral(resourceName: "fungiPoint2")
+        annotationView.canShowCallout = true
+        return annotationView
+    }
     
     /*
      // MARK: - Navigation
@@ -73,16 +86,3 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
      */
     
 }// End of Class
-
-//private extension MKMapView {
-//    func centerToLocation(
-//        _ location: CLLocation,
-//        regionRadius: CLLocationDistance = 2000
-//    ) {
-//        let coordinateRegion = MKCoordinateRegion(
-//            center: location.coordinate,
-//            latitudinalMeters: regionRadius,
-//            longitudinalMeters: regionRadius)
-//        setRegion(coordinateRegion, animated: true)
-//    }
-//}
