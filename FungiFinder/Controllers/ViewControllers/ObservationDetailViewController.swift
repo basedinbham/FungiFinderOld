@@ -8,9 +8,9 @@
 import UIKit
 
 class ObservationDetailViewController: UIViewController {
-
+    
     //MARK: - OUTLETS
- 
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var notesTextField: UITextField!
@@ -18,7 +18,7 @@ class ObservationDetailViewController: UIViewController {
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
-   
+    
     
     //MARK: - PROPERTIES
     var observation: Observation?
@@ -27,7 +27,8 @@ class ObservationDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-
+        self.hideKeyboardWhenTappedAround() 
+        
     }
     
     //MARK: - ACTIONS
@@ -38,8 +39,11 @@ class ObservationDetailViewController: UIViewController {
               let latitude = latitudeTextField.text, !latitude.isEmpty,
               let longitude = longitudeTextField.text, !longitude.isEmpty else { return }
         
-
-        ObservationController.shared.createObservation(with: name, date: datePicker.date, notes: notes, reminder: reminderPicker.date, type: type, latitude: latitude, longitude: longitude)
+        if let observation = observation {
+            ObservationController.shared.updateObservation(observation, name: name, date: datePicker.date, notes: notes, reminder: reminderPicker.date, type: type, latitude: latitude, longitude: longitude)
+        } else {
+            ObservationController.shared.createObservation(with: name, date: datePicker.date, notes: notes, reminder: reminderPicker.date, type: type, latitude: latitude, longitude: longitude)
+        }
         navigationController?.popViewController(animated: true)
     }
     
@@ -53,18 +57,29 @@ class ObservationDetailViewController: UIViewController {
         typeTextField.text = observation.type
         latitudeTextField.text = observation.latitude
         longitudeTextField.text = observation.longitude
-        
     }
     
     
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+}// End of Class
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
-    */
-
-}
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}// End of Extension
