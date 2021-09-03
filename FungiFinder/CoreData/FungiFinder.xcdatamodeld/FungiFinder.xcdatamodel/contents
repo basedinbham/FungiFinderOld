@@ -13,7 +13,7 @@
         <attribute name="stipeCharacter" attributeType="String" defaultValueString="nil"/>
         <attribute name="whichGills" attributeType="String" defaultValueString="nil"/>
     </entity>
-    <entity name="Observation" representedClassName="Observation" syncable="YES" codeGenerationType="class">
+    <entity name="Observation" representedClassName=".Observation" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" defaultDateTimeInterval="652053300" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>

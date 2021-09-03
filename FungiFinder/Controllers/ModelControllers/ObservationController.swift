@@ -11,7 +11,7 @@ class ObservationController {
     
     static let shared = ObservationController()
     var observations: [Observation] = []
-    let publicDB = CKContainer.default().publicCloudDatabase
+    let privateDB = CKContainer.default().privateCloudDatabase
     
     private lazy var fetchRequest: NSFetchRequest<Observation> = {
         let request = NSFetchRequest<Observation>(entityName: "Observation")
@@ -24,18 +24,36 @@ class ObservationController {
     func createObservation(with name: String, date: Date, notes: String, reminder: Date, type: String, latitude: String, longitude: String) {
         let observation = Observation(date: date, image: nil, latitude: latitude, longitude: longitude, name: name, notes: notes, reminder: reminder, type: type)
         observations.append(observation)
+        CoreDataStack.saveContext()
     }
     
     func fetchOBservations() {
         let observations = (try? CoreDataStack.context.fetch(fetchRequest)) ?? []
         self.observations = observations
-        CoreDataStack.saveContext()
 
     }
     
+    func updateObservation(_ observation: Observation, name: String, date: Date, notes: String, reminder: Date, type: String, latitude: String, longitude: String) {
+        observation.name = name
+        observation.date = date
+        observation.notes = notes
+        observation.reminder = reminder
+        observation.type = type
+        observation.latitude = latitude
+        observation.longitude = longitude
+        
+        CoreDataStack.saveContext()
+    }
     
-    
-    
+    func deleteObservation(observation: Observation) {
+        if let index = observations.firstIndex(of: observation) {
+            observations.remove(at: index)
+            CoreDataStack.context.delete(observation)
+            CoreDataStack.saveContext()
+            
+            // clear notifications for observation
+        }
+    }
     
     
     
