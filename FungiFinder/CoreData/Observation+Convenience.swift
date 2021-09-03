@@ -7,8 +7,9 @@
 
 import CoreData
 import UIKit
+import MapKit
 
-extension Observation {
+extension Observation: MKAnnotation {
     convenience init(date: Date, image: UIImage?, latitude: String?, longitude: String?, name: String, notes: String?, reminder: Date?, type: String, context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)
         self.date = date
@@ -21,4 +22,15 @@ extension Observation {
         self.type = type
         self.id = UUID()
     }
-} // End of Extension
+
+        public var coordinate: CLLocationCoordinate2D {
+            // latitude and longitude are optional NSNumbers
+            guard let latitude = latitude, let longitude = longitude else {
+                return kCLLocationCoordinate2DInvalid
+            }
+            
+            let latDegrees = CLLocationDegrees(latitude) ?? 0.0
+            let longDegrees = CLLocationDegrees(longitude) ?? 0.0
+            return CLLocationCoordinate2D(latitude: latDegrees, longitude: longDegrees)
+        }
+    }// End of Extension

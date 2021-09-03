@@ -38,6 +38,5 @@ import CoreData
             }
         }
     }
-    
 } // End of enum
 
